@@ -255,7 +255,7 @@ namespace Test.Bot.FFXIV
         }
     }
 
-    public class FakeDiscordHandler : FFXIVAPP.Plugin.Log.ChatHandler.IDiscord
+    public class FakeDiscordHandler : FFXIVAPP.Plugin.Discord.ChatHandler.IDiscord
     {
         public void Broadcast(string message)
         {
@@ -279,14 +279,14 @@ namespace Test.Bot.FFXIV
     {
         private static FakePluginHost fakePluginHost;
         private static FakeDiscordHandler fakeDiscordHandler;
-        private static FFXIVAPP.Plugin.Log.ChatHandler.FFXIV FFXIVHandler;
+        private static FFXIVAPP.Plugin.Discord.ChatHandler.FFXIV FFXIVHandler;
 
         [ClassInitialize]
         public static void Setup(TestContext context)
         {
             fakePluginHost = new FakePluginHost();
             fakeDiscordHandler = new FakeDiscordHandler();
-            FFXIVHandler = new FFXIVAPP.Plugin.Log.ChatHandler.FFXIV(fakePluginHost);
+            FFXIVHandler = new FFXIVAPP.Plugin.Discord.ChatHandler.FFXIV(fakePluginHost);
             fakePluginHost.InitConsts();
             FFXIVHandler.MainAsync(fakeDiscordHandler).Wait();
         }
