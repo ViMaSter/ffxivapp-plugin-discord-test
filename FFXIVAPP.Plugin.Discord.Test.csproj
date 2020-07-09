@@ -54,11 +54,13 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
-    <None Include="packages.config" />
     <EmbeddedResource Include="TestData\FFXIVChat\crossworld.result" />
     <EmbeddedResource Include="TestData\FFXIVChat\localuser.result" />
     <EmbeddedResource Include="TestData\FFXIVChat\item.result" />
     <EmbeddedResource Include="TestData\FFXIVChat\partyfinder.result" />
+    <None Include="packages.config" />
+    <EmbeddedResource Include="TestData\FFXIVChat\item2.binary" />
+    <EmbeddedResource Include="TestData\FFXIVChat\item2.result" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="TestData\FFXIVChat\crossworld.binary">
